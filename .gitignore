@@ -1,0 +1,12 @@
+__pycache__/
+*.py[cod]
+.venv/
+.env
+.env.*
+.tabpfn.local.json
+.matplotlib/
+.DS_Store
+/study/datasets/*
+!/study/datasets/README.md
+/study/reference_runs/
+/recomputed/

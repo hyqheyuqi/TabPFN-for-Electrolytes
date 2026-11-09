@@ -1,0 +1,17 @@
+# Upstream datasets
+
+Download the inputs from their original publishers or author repositories and use their terms of access and reuse. This repository includes derived statistics, predictions and split indices. It does not mirror the source files. The paths below are relative to this directory.
+
+| Dataset | Source | Local paths and use |
+| --- | --- | --- |
+| AMPERE (Yi et al.) | [Author repository](https://github.com/YIBAOZHAO161441/Electrolyte_Design_for_Electric_Aircraft), [Zenodo measurements](https://zenodo.org/records/21030473) | Preserve the upstream `Data/` hierarchy under `ampere/GitHub/`, and place the original workbooks in `ampere/Zenodo/`. Used for the fixed conductivity split, adaptation and RCS replay. |
+| CALiSol-23 | [Dataset DOI](https://doi.org/10.11583/DTU.24559960.v1), [paper](https://doi.org/10.1038/s41597-024-03575-8) | `calisol23/CALiSol-23/calisol23_DOI_10.11583DTU.c.6929599.csv`. Used for the separate mol/L and mol/kg benchmarks. |
+| Flores | [Paper](https://doi.org/10.1039/D2DD00027J), [author data file](https://github.com/BIG-MAP/SR-electrolytes/blob/f1e3155c650b8a239f027c43d82e350e0427a255/data/HTE_dataset_PC_EMC_EC_LiPF6.csv) | `flores/HTE_dataset_PC_EMC_EC_LiPF6.csv`. Used for conductivity prediction and the local symbolic-formula comparison. |
+| Clio | [Paper](https://doi.org/10.1038/s41467-022-32938-1), [author data](https://github.com/BattModels/Clio-NatCommData/tree/2ba755d87abf60ac00bc55e874ddd9c7f3d64bcb) | `clio/ECDMCEMC_optimization_march2021.csv` supplies measured conductivity. `clio/AEM_training_data.csv` is used for the source audit only. The measured table supports both the static benchmark and the separate sequential replay. |
+| Ionic liquids | [Paper](https://doi.org/10.1039/D5CP04143K), [data DOI](https://doi.org/10.71870/11vs-fb95) | `ionic_liquids/nh_data.json` and `ionic_liquids/ilthermo_data.json`. Used as separate conductivity benchmarks. |
+| ChemArr | [Paper](https://doi.org/10.1021/acscentsci.2c01123), [author data](https://github.com/learningmatter-mit/Chem-prop-pred/tree/39b0c16f70c4142b32a67531a093718c767ad43d/data) | `chemarr/data/clean_train_data.csv`. Used for structure-grouped conductivity prediction. |
+| Electrolytomics | [Paper](https://doi.org/10.1021/acs.chemmater.4c03196), [author repository](https://github.com/AmanchukwuLab/electrolytomics/tree/2963513313ab6d5f1a9c9a5ef18bba6fae7e1002) | Under `electrolytomics/datasets/`, preserve `raw/conductivity/EDB-1_conductivity.csv` and `featurized/conductivity/all_qsar_fgrp_cond.csv`. Used for the matched conductivity and descriptor benchmark. |
+| Aqueous electrolytes | [Paper](https://doi.org/10.1016/j.xcrp.2020.100264), [author data](https://data.matr.io/5/) | `aqueous/otto_aqueous.json`. Used to reconstruct recipe features and predict conductivity. |
+| Ionic polymer (Song et al.) | [Paper](https://doi.org/10.1002/adma.202500941), [author repository](https://github.com/WangGroupFDU/Bayes_optimization/tree/d2c5476e3a9bd54bc139ed59830aac461ee50770) | Under `ionic_polymer/`, use the three experimental workbooks and two round-specific reference CSVs named in `prepare_polymer_search.py`. The CSVs check the local GP implementation. Experimental labels come from the workbooks. |
+
+The research scripts use additional historical audit files or prediction caches where indicated in the repository README. The saved-result check does not need those files or the source datasets.
