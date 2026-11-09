@@ -83,3 +83,7 @@ python -m unittest discover -s study/objective_search/ionic_polymer
 [Upstream dataset links and input paths](study/datasets/README.md) identify the original sources. Original datasets, account configuration, prediction caches and historical local audit inputs are excluded. The legacy experiment runners require the corresponding input files or caches and are retained to document how the analyses were performed. They are not a turnkey full-replay pipeline from this snapshot.
 
 The published AMPERE conductivity benchmark used the hosted TabPFN V3 regression checkpoint `tabpfn-v3-regressor-v3_default.ckpt`, `tabpfn-client` 0.5.3, eight estimators, and six inference seeds. The hosted inference and account-access implementations have been removed from the release. The model and client names here document the original run.
+
+## License
+
+The [MIT License](LICENSE) applies to the original software and its associated documentation in this repository. Third-party datasets, code, and model weights remain subject to their respective terms.
